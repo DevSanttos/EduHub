@@ -120,14 +120,13 @@ header nav {
     background: #111827;
     min-height: 80px;
     display: flex;
-    align-items: center;
     padding: 10px 0;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 50px;
 }
 
-.title-contant {
-    margin-left: 30px;
+.title-content {
+    padding-left: 288px;
 }
 
 .title-bar h1 {
