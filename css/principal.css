@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     background-color: #ffffff;
 }
 
@@ -89,6 +91,7 @@ main {
 
 }
 
+/* Estilização dos "modais" (na verdade são divs que representam uam caixa em que a cor do fundo varia um pouco) */
 #modal_principal {
     background-color: #f5f5f5;
     box-shadow: #787c85 10px 0.2px 20px;
@@ -118,19 +121,48 @@ main {
     color: #333232
 }
 
+#modal_secundario {
+    padding: 50px 50px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    background-color: white;
+}
+
+#texto_modal_secundario {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 5px;
+}
+/*------------------ Fim estilização dos "modais" ------------------*/
+
+
+
+
+/* Certificados */
 .texto_emissao_certificado {
     font-size: 1.0em;
     color: #8b8e92;
     margin-top: 15px;
 }
 
-#video_home {
-    max-width: 65%;
+section.certificados {
+    background-color: #f5f5f5;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px 240px;
+    border-color: #11182721;
+    border-style: solid;
+    border-top: 0cap;
 }
 
-.span_texto {
-    color: #111827;
-    font-weight: bold;
+#titulo_certificados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #info_certificado {
@@ -139,7 +171,7 @@ main {
 }
 
 #card_certificado {
-    width: 600px;
+    width: 1035px;
     height: 100px;
     border-radius: 15px;
     background-color: white;
@@ -150,7 +182,11 @@ main {
 }
 
 #card_certificado button {
+    font-size: 18px;
+    width: 169px;
+    height: 57px;
     padding: 10px 15px;
+    margin: 0px 0px 0px auto;
     border-radius: 8px;
     border: solid;
     background-color: #111827;
@@ -166,31 +202,20 @@ main {
     border-radius: 25px;
 }
 
-#modal_secundario {
-    padding: 50px 50px;
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    background-color: white;
+
+
+#h1_certificados {
+    font-size: 48px;
+    color: #111827;
+    margin-bottom: 10px;
 }
 
-#texto_modal_secundario {
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    gap: 5px;
-}
+/*---------------------------------- Fim certificados ----------------------------------*/
 
-#ver_certificado_btn {
-    margin-top: 20px;
-    padding: 15px 25px;
-    width: fit-content;
-    border-radius: 8px;
-    border: solid;
-    background-color: #111827;
-    color: white;
-    cursor: pointer;
-}
+
+
+
+/* Estilização da div que cuida da foto de perfil com a setinha */
 
 #func_perfil{
     display: flex;
@@ -221,6 +246,8 @@ main {
     width: 60px;
     height: 50px;
 }
+
+/*--------------- Fim da estilização da div que cuida da foto de perfil com a setinha  ---------------*/
 
 #sequencia_cursos {
     margin-top: 40px;
@@ -344,6 +371,16 @@ main {
     font-size: 1.2em;
     font-weight: bold;
 }
+
+#video_home {
+    max-width: 65%;
+}
+
+.span_texto {
+    color: #111827;
+    font-weight: bold;
+}
+
 
 #modal_terciário {
     display: flex;
@@ -539,7 +576,13 @@ footer {
 
 
 
-
+.faded_paragraph_for_h1_title {
+   color: #7d828d;
+   font-size: 24px;
+   font-weight: normal;
+   padding: 0px 10px;
+   margin-bottom: 100px;
+}
 
 
 h2 {
