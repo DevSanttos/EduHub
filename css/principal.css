@@ -582,6 +582,14 @@ footer {
    margin-bottom: 100px;
 }
 
+.faded_paragraph_for_h1_title {
+   color: #7d828d;
+   font-size: 24px;
+   font-weight: normal;
+   padding: 0px 10px;
+   margin-bottom: 100px;
+}
+
 h2 {
     font-size: 1.8em;
     color: #111827;
