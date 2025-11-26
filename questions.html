@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Prático Full Stack</title>
+    <link rel="stylesheet" href="/css/questions.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Categorias</a></li>
+                </ul>
+            </div>
+            <div id="func_perfil">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                </svg>
+                <div id="circulo_perfil">
+                    <img id="imagem_perfil" src="assets/images/1368740.png" alt="">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="title-bar">
+        <div class="title-content">
+            <h1>Teste prático de Desenvolvimento Full Stack</h1>
+            <p class="subtitle">Questões de múltipla escolha para fixar o que você aprendeu no curso.</p>
+        </div>
+    </div>
+
+    <div class="container-questions">
+        <div class="questions">
+            <p class="questions-title">Associe os números aos parênteses, marcando a opção onde aparece a sequência
+                correta:
+            </p>
+            <p>
+                1 – Classe <br>
+                2 – Objeto <br>
+                3 – Método <br>
+                4 – Atributo <br>
+                5 – Construtor
+            </p>
+
+            <p class="questions-options">
+                ( ) Ação que um objeto pode realizar.<br>
+                ( ) Estrutura que representa uma entidade, contendo métodos e atributos.<br>
+                ( ) Elemento que armazena características de um objeto.<br>
+                ( ) Instância criada a partir de uma classe.<br>
+                ( ) Executado ao criar um objeto, não possui tipo de retorno.
+            </p>
+
+            <div class="options">
+                <label><input type="radio" name="q1" onclick="selectOption(this)"><span>2-1-3-4-5</span></label>
+                <label><input type="radio" name="q1" onclick="selectOption(this)"><span>3-1-2-4-5</span></label>
+                <label><input type="radio" name="q1" onclick="selectOption(this)"><span>3-1-4-2-5</span></label>
+                <label><input type="radio" name="q1" onclick="selectOption(this)"><span>5-1-4-2-3</span></label>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="questions">
+            <p class="questions-title"> Qual destas é a assinatura correta do método principal em Java?</p>
+            <p>
+                a) public static void main(String args[])<br>
+                b) static public main(String[] args)<br>
+                c) public void main(String[] args)<br>
+                d) public static int main(String[] args)
+            </p>
+
+            <div class="options">
+                <label><input type="radio" name="q2" onclick="selectOption(this)"> a</label>
+                <label><input type="radio" name="q2" onclick="selectOption(this)"> b</label>
+                <label><input type="radio" name="q2" onclick="selectOption(this)"> c</label>
+                <label><input type="radio" name="q2" onclick="selectOption(this)"> d</label>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="questions">
+            <p class="questions-title">Qual operador é usado para comparar igualdade entre dois valores?</p>
+            <p>
+                a) =<br>
+                b) :=<br>
+                c) equals<br>
+                d) ==
+            </p>
+
+            <div class="options">
+                <label><input type="radio" name="q3" onclick="selectOption(this)"> a</label>
+                <label><input type="radio" name="q3" onclick="selectOption(this)"> b</label>
+                <label><input type="radio" name="q3" onclick="selectOption(this)"> c</label>
+                <label><input type="radio" name="q3" onclick="selectOption(this)"> d</label>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="questions">
+            <p class="questions-title">O que o comando System.out.println() faz?</p>
+            <p>
+                a) Lê dados do teclado<br>
+                b) Imprime texto com quebra de linha<br>
+                c) Imprime texto sem quebra de linha<br>
+                d) Finaliza o programa
+            </p>
+
+            <div class="options">
+                <label><input type="radio" name="q4" onclick="selectOption(this)"> a</label>
+                <label><input type="radio" name="q4" onclick="selectOption(this)"> b</label>
+                <label><input type="radio" name="q4" onclick="selectOption(this)"> c</label>
+                <label><input type="radio" name="q4" onclick="selectOption(this)"> d</label>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="questions">
+            <p class="questions-title">Sobre conceitos básicos da linguagem Java, analise as afirmações abaixo e marque
+                V para
+                verdadeiro e F para falso, depois assinale a alternativa que apresenta a sequência correta: </p>
+            <p>
+                ( ) O método main é o ponto de entrada de um programa Java. <br>
+                ( ) A instrução System.out.println() é usada para imprimir algo na tela. <br>
+                ( ) Em Java, toda variável deve ter um tipo definido. <br>
+                ( ) Em Java, o operador = é usado para comparar valores. <br><br>
+                (A) V, V, V, F. <br>
+                (B) V, F, V, F. <br>
+                (C) F, V, V, V. <br>
+                (D) V, V, F, F. <br>
+            </p>
+
+            <div class="options">
+                <label><input type="radio" name="q5" onclick="selectOption(this)"> a</label>
+                <label><input type="radio" name="q5" onclick="selectOption(this)"> b</label>
+                <label><input type="radio" name="q5" onclick="selectOption(this)"> c</label>
+                <label><input type="radio" name="q5" onclick="selectOption(this)"> d</label>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="questions">
+            <p class="questions-title">Qual tipo de dado é usado para armazenar texto em Java?</p>
+            <p>
+                a) text <br>
+                b) String <br>
+                c) char[] <br>
+                d) word
+            </p>
+
+            <div class="options">
+                <label><input type="radio" name="q6" onclick="selectOption(this)"> a</label>
+                <label><input type="radio" name="q6" onclick="selectOption(this)"> b</label>
+                <label><input type="radio" name="q6" onclick="selectOption(this)"> c</label>
+                <label><input type="radio" name="q6" onclick="selectOption(this)"> d</label>
+            </div>
+        </div>
+
+        <div class="finish-button-container">
+            <button class="finish-button">Finalizar</button>
+        </div>
+
+    </div>
+
+    <script>
+        function selectOption(radio) {
+            const label = radio.closest('label');
+
+            const isSelected = label.classList.contains('selected');
+
+            const optionsDiv = radio.closest('.options');
+
+            optionsDiv.querySelectorAll('label').forEach(lbl => {
+                lbl.classList.remove('selected');
+                lbl.querySelector('input[type="radio"]').checked = false;
+            });
+
+            if (!isSelected) {
+                label.classList.add('selected');
+                radio.checked = true;
+            }
+        }
+    </script>
+</body>
+
+</html>
