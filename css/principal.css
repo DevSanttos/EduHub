@@ -6,12 +6,11 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
 }
 
 header {
     background-color: #111827;
-    
 }
 
 header nav {
@@ -83,6 +82,7 @@ header nav {
     background-color: transparent;
     color: #ffffff;
     border: solid;
+    transition: 0.3s;
 }
 
 main {
@@ -165,8 +165,6 @@ main {
     margin-bottom: 10px;
     border-radius: 25px;
 }
-
-
 
 #modal_secundario {
     padding: 50px 50px;
@@ -257,16 +255,21 @@ main {
     flex-direction: column;
     padding: 10px;
     border-style: solid;
-    border-width: 0.2em;
-    border-color: #c0c2c7;
+    border-width: 0.05em;
+    border-color: #dfe0e2;
     border-radius: 10px;
     font-size: 1.0em;
+    box-shadow: -10px 10px 5px rgb(209, 208, 208);
 }
 
 .card_curso:hover {
     box-shadow: 0px 1px 12px rgb(173, 171, 171);
     transition: 0.3s;
     transform: scale(1.03);
+}
+
+.card_curso {
+    transition: 0.3s;
 }
 
 .card_curso img {
@@ -311,7 +314,8 @@ main {
     border-width: 0.15em;
     border-radius: 40px;
     border-style: solid;
-    border-color: #c0c2c7;
+    border-color: #ffe600;
+    background: #ffeda4;
 }
 
 #avaliacoes {
@@ -341,20 +345,202 @@ main {
     font-weight: bold;
 }
 
-
 #modal_terciário {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    background-color: #111827;
+}
+#texto_modal_terciario_aside_esquerdo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 40px;
+    gap: 50px;
+}
+    
+#textos_modal_terciario {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 20px;
+}
 
+#textos_modal_terciario h2 {
+    font-size: 2.3em;
+    color: #ffffff;
+}
+
+#textos_modal_terciario p {
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: #d1d5db;
+    text-align: left;
+}
+
+#saiba_mais {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+#saiba_mais p {
+    color: floralwhite;
+    font-weight: lighter;
+    font-size: smaller;
+    align-items: center;
+}
+
+#texto_modal_terciario_aside_esquerdo button {
+    padding: 15px 25px;
+    width: fit-content;
+    font-size: 1.3em;
+    font-weight: lighter;
+    border-radius: 8px;
+    border: solid;
+    background-color: #ffffff;
+    color: #111827;
+    cursor: pointer;
+}
+
+#texto_modal_terciario_aside_esquerdo button:hover {
+    background-color: #111827;
+    color: #ffffff;
+    transition: 0.3s;
+} 
+
+#texto_modal_terciario_aside_direito {
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #modal_quaternario {
-
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px;
+    flex-direction: column;
 }
 
+#modal_quaternario h2 {
+    font-size: 2.0em;
+    color: #111827;
+    margin-bottom: 20px;
+}
 
+#modal_quaternario p {
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: #333232;
+}
+
+#container_cards_comentarios {
+    display: flex;
+    padding: 50px 0px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+#card_comentario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    gap: 15px;
+    background-color: #e6eaee;
+    padding: 20px;
+}
+
+#card_comentario p {
+    font-size: 1.0em;
+    color: #111827;
+}
+
+#perfil_comentario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+#imagem_perfil {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #4a505eb2;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+#nome_ {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#nome_ p:nth-child(1) {
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+#nome_ p:nth-child(2) {
+    font-size: 0.9em;
+    color: #555555;
+}
 
 footer {
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #111827;
+    padding: 20px 0px 20px 0px;
+    gap: 20px;
 }
+
+#links_rodape ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#links_rodape li {
+    padding: 5px 0;
+    color: #ffffff;
+}
+
+#links_rodape a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#links_rodape a:hover {
+    text-decoration: underline;
+}
+
+#info_rodape {
+}
+
+#info_rodape p {
+    
+    color: #ffffff;
+}
+
+
+
+
+
+
 
 h2 {
     font-size: 1.8em;
