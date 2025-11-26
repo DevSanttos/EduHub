@@ -117,7 +117,7 @@ header nav {
 
 .title-bar {
     width: 100%; 
-    background: #111827;
+    background: #FAFAFA;
     min-height: 80px;
     display: flex;
     padding: 10px 0;
@@ -126,7 +126,7 @@ header nav {
 }
 
 .title-content {
-    padding-left: 288px;
+    padding-left: 20%;
 }
 
 .title-bar h1 {
@@ -134,7 +134,7 @@ header nav {
     font-weight: bold; 
     margin: 0;
     padding: 0;
-    color: white;
+    color: #111827;
 }
 
 .title-bar .subtitle {
@@ -142,7 +142,7 @@ header nav {
     font-weight: 300;
     margin: 5px 0 0 0;
     padding: 0;
-    color: #9E9E9E;
+    color: #111827;
 }
 
 /* Questões */
@@ -150,11 +150,16 @@ header nav {
 .container-questions {
     width: 60%;
     margin: auto;
-    box-sizing: border-box;
 }
 
 .questions {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+}
+
+.questions-multiple {
+    display: flex;
+    flex-direction: row;
+    gap: 38%;
 }
 
 .questions .questions-title {
@@ -165,15 +170,18 @@ header nav {
 }
 
 .questions p {
+    font-size: 18px;
+    margin: 0;
     line-height: 20px;
     color: #111827;
-    margin-bottom: 15px;
 }
 
 .divider {
     border-bottom: 1px solid #ddd;
     margin: 25px 0;
 }
+
+/* Opções de resposta */
 
 .options {
     display: grid;
