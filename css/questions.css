@@ -112,6 +112,7 @@ header nav {
 #imagem_perfil {
     width: 60px;
     height: 50px;
+    object-fit: cover;
 }
 
 /* Titulo */
