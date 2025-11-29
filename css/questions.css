@@ -94,9 +94,7 @@ header nav {
     cursor: pointer;
 }
 
-#seta_perfil {
-
-}
+#seta_perfil {}
 
 #circulo_perfil {
     width: 50px;
@@ -122,17 +120,15 @@ header nav {
     background: #FAFAFA;
     min-height: 80px;
     display: flex;
-    justify-content: center; /* Centraliza o title-content dentro do title-bar */
+    justify-content: center;
     padding: 10px 0;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 50px;
 }
 
 .title-content {
-    /* REMOVA ou COMENTE a linha: padding-left: 20%; */
-    /* Use as mesmas regras de largura e centralização do container-questions */
-    width: 60%; 
-    padding-left: 0; /* Garante que não há padding extra */
+    width: 60%;
+    padding-left: 0;
 }
 
 .title-bar h1 {
@@ -155,7 +151,7 @@ header nav {
 
 .container-questions {
     max-width: 1200px;
-    width: 60%; 
+    width: 60%;
     margin: auto;
 }
 
@@ -172,7 +168,7 @@ header nav {
 }
 
 .questions .questions-title {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 15px;
     display: block;
     line-height: 30px;
@@ -243,6 +239,13 @@ header nav {
 
 /* finalizar */
 
+.button-container {
+    max-width: 1200px;
+    margin: 30px auto 50px auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .finish-button {
     background-color: #111827;
     color: #ffffff;
@@ -250,6 +253,8 @@ header nav {
     border-radius: 5px;
 
     padding: 10px 30px;
+    margin-top: 30px;
+    margin-bottom: 100px;
     font-size: 16px;
     font-weight: bold;
 
@@ -258,9 +263,6 @@ header nav {
 
     outline: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-
-    display: block;
-    margin: 30px auto;
 }
 
 .finish-button:hover {
@@ -270,4 +272,88 @@ header nav {
 .finish-button:active {
     background-color: #1a1e22;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.review-item {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    position: relative;
+    width: 100%; 
+}
+
+#result-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #111827;
+}
+
+#result-subtitle {
+    font-size: 16px;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.feedback-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.feedback-badge.correta {
+    background-color: #28a745;
+}
+
+.feedback-badge.errada {
+    background-color: #dc3545;
+}
+
+.correct-answer-text {
+    color: #28a745;
+    font-weight: bold;
+}
+.user-answer-text {
+    font-style: italic;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #111827;
+    padding: 20px 0px 20px 0px;
+    gap: 20px;
+}
+
+#links_rodape ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#links_rodape li {
+    padding: 5px 0;
+    color: #ffffff;
+}
+
+#links_rodape a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#links_rodape a:hover {
+    text-decoration: underline;
+}
+
+#info_rodape {}
+
+#info_rodape p {
+
+    color: #ffffff;
 }
