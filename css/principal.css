@@ -145,7 +145,7 @@ main {
 .texto_emissao_certificado {
     font-size: 1.0em;
     color: #8b8e92;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 section.certificados {
@@ -158,6 +158,7 @@ section.certificados {
     border-color: #11182721;
     border-style: solid;
     border-top: 0cap;
+    
 }
 
 #titulo_certificados {
@@ -166,23 +167,24 @@ section.certificados {
     align-items: center;
 }
 
-#info_certificado {
+.info_certificado {
     display: flex;
     flex-direction: column;
 }
 
-#card_certificado {
+.card_certificado {
     width: 1035px;
     height: 100px;
     border-radius: 15px;
     background-color: white;
-    padding: 20px;
     display: flex;
+    border: 1px solid #ccc;
+    padding: 15px;
     gap: 20px;
     align-items: center;
 }
 
-#card_certificado button {
+.ver_certificado_btn {
     font-size: 18px;
     width: 169px;
     height: 57px;
@@ -196,17 +198,24 @@ section.certificados {
     font-weight: bold;
 }
 
-#card_certificado img{
+.card_certificado img{
     width: 70px;
     height: 50px;
     margin-bottom: 10px;
     border-radius: 25px;
+    object-fit: cover; 
 }
 
 #h1_certificados {
     font-size: 48px;
     color: #111827;
     margin-bottom: 10px;
+}
+
+#container_certificados{
+    display: flex;
+    flex-direction: column; /* Coloca um embaixo do outro */
+    gap: 20px;
 }
 
 /*---------------------------------- Fim certificados ----------------------------------*/
@@ -235,15 +244,16 @@ section.certificados {
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
-    align-items: center;
-    justify-items: center;
-    cursor: pointer;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-#imagem_perfil{
-    width: 60px;
-    height: 50px;
+#imagem_perfil {
+    width: 100%;       
+    height: 100%;      
+    object-fit: cover; 
 }
 
 /*--------------- Fim da estilização da div que cuida da foto de perfil com a setinha  ---------------*/
@@ -272,20 +282,19 @@ section.certificados {
     gap: 30px;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0px;
+    padding: 30px 0px
 }
 
 .card_curso {
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    border-style: solid;
-    border-width: 0.05em;
-    border-color: #dfe0e2;
+    border: 0.05em solid #dfe0e2; /* Sintaxe curta de border */
     border-radius: 10px;
-    font-size: 1.0em;
     box-shadow: -10px 10px 5px rgb(209, 208, 208);
+    cursor: pointer;
+    background-color: white; /* Garante fundo branco se sobrepor algo */
+    transition: transform 0.2s;
 }
 
 .card_curso:hover {
@@ -299,9 +308,10 @@ section.certificados {
 }
 
 .card_curso img {
-    width: 250px;
+    width: 100%;
     height: auto;
-    margin-bottom: 10px;
+    border-radius: 5px; /* Opcional: arredonda a imagem levemente */
+    object-fit: cover;
 }
 
 .card_curso p {

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/principal.css">
     <title>EduHub - Certificados</title>
 </head>
-
+<script src="js/script.js"></script>
 <body>
     <header>
         <nav>
@@ -36,23 +36,149 @@
             <h1 id="h1_certificados">Certificados</h1>
             <p class="faded_paragraph_for_h1_title">Seus certificados aparecem aqui</p>
             <div id="container_certificados">
-                <div id="card_certificado">
+                <div class="card_certificado">
                     <img src="assets/images/images.jpg" alt="">
-                    <div id="info_certificado">
+                    <div class="info_certificado">
                         <h3>Curso de Desenvolvimento Full Stack (2025)</h3>
                         <p class="texto_emissao_certificado">Emitido em 20 de Maio de 2024</p>
                     </div>
-                    <button id="ver_certificado_btn">Ver certificado</button>
+                    <button class="ver_certificado_btn">Ver certificado</button>
+                </div>
+                <div class="card_certificado">
+                    <img src="assets/images/Spring-Boot.png" alt="">
+                    <div class="info_certificado">
+                        <h3>Curso de Desenvolvimento Backend com Java Spring Boot</h3>
+                        <p class="texto_emissao_certificado">Emitido em 20 de Maio de 2024</p>
+                    </div>
+                    <button class="ver_certificado_btn">Ver certificado</button>
                 </div>
             </div>
         </section>
-        <div id="container_cards_cursos">
-            <div class="card_curso">
-                <h3>Desenvolvimento Full Stack</h3>
+
+        <div id="modal_secundario">
+            <div id="texto_modal_secundario">
+                <h2>Baseado em suas atividades</h2>
+                
+            </div>
+
+            <div id="sequencia_cursos">
+                <a href="#">
+                    <p><span class="span_texto">Desenvolvimento Full Stack</span></p>
+                </a>
+                <a href="#">
+                    <p>Desenvolvimento Backend</p>
+                </a>
+                
+            </div>
+
+            <div id="container_cards_cursos">
+                <div class="card_curso">
+                    <img src="/assets/images/Primeiro vídeo.png" alt="Desenvolvimento Full Stack">
+                    <p>Desenvolvimento Full Stack</p>
+                    <div id="atributos_card">
+                        <div id="atributos_primarios">
+                            <div id="nota">
+                                <p>⭐ 4,5</p>
+                            </div>
+                            <div id="em_alta">
+                                <p>Em alta🔥</p>
+                            </div>
+                        </div>
+                        <div id="avaliacoes">
+                            <p>2555 Avaliações</p>
+                        </div>
+                    </div>
+                    <div id="preco">
+                        <del>R$ 149,90</del>
+                        <p>R$ 35,90</p>
+                    </div>
+                </div>
+
+                <div class="card_curso">
+                    <img src="/assets/images/Primeiro vídeo.png" alt="Desenvolvimento Full Stack">
+                    <p>Desenvolvimento Full Stack</p>
+                    <div id="atributos_card">
+                        <div id="atributos_primarios">
+                            <div id="nota">
+                                <p>⭐ 4,5</p>
+                            </div>
+                            <div id="em_alta">
+                                <p>Em alta🔥</p>
+                            </div>
+                        </div>
+
+                        <div id="avaliacoes">
+                            <p>2555 Avaliações</p>
+                        </div>
+                    </div>
+                    <div id="preco">
+                        <del>R$ 149,90</del>
+                        <p>R$ 35,90</p>
+                    </div>
+                </div>
+
+                <div class="card_curso">
+                    <img src="/assets/images/Primeiro vídeo.png" alt="Desenvolvimento Full Stack">
+                    <p>Desenvolvimento Full Stack</p>
+                    <div id="atributos_card">
+                        <div id="atributos_primarios">
+                            <div id="nota">
+                                <p>⭐ 4,5</p>
+                            </div>
+                            <div id="em_alta">
+                                <p>Em alta🔥</p>
+                            </div>
+                        </div>
+
+                        <div id="avaliacoes">
+                            <p>2555 Avaliações</p>
+                        </div>
+                    </div>
+                    <div id="preco">
+                        <del>R$ 149,90</del>
+                        <p>R$ 35,90</p>
+                    </div>
+                </div>
+                
+                <div class="card_curso">
+                    <img src="/assets/images/Primeiro vídeo.png" alt="Desenvolvimento Full Stack">
+                    <p>Desenvolvimento Full Stack</p>
+                    <div id="atributos_card">
+                        <div id="atributos_primarios">
+                            <div id="nota">
+                                <p>⭐ 4,5</p>
+                            </div>
+                            <div id="em_alta">
+                                <p>Em alta🔥</p>
+                            </div>
+                        </div>
+
+                        <div id="avaliacoes">
+                            <p>2555 Avaliações</p>
+                        </div>
+                    </div>
+                    <div id="preco">
+                        <del>R$ 149,90</del>
+                        <p>R$ 35,90</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
+    <footer>
+        <div id="links_rodape">
+            <ul>
+                <li><a href="principal.html">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <div id="info_rodape">
+            <p>&copy; 2024 EduHub. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
