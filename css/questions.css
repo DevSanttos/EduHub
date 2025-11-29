@@ -1,15 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Menu (header) */
+/* Menu */
 
 header {
     background-color: #111827;
-    
 }
 
 header nav {
@@ -27,6 +27,7 @@ header nav {
 
 #links li a {
     color: rgb(255, 255, 255);
+    font-weight: bold;
     padding: 10px;
     text-decoration: none;
 }
@@ -53,7 +54,7 @@ header nav {
 }
 
 #login_btn {
-    padding-top: 10px;    
+    padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 8px;
     border-color: #ffffff;
@@ -69,7 +70,7 @@ header nav {
 }
 
 #cadastro_btn {
-    padding-top: 14px;    
+    padding-top: 14px;
     padding-bottom: 14px;
     border-radius: 8px;
     border: solid;
@@ -83,7 +84,7 @@ header nav {
     border: solid;
 }
 
-#func_perfil{
+#func_perfil {
     display: flex;
     gap: 25px;
     align-items: center;
@@ -93,11 +94,11 @@ header nav {
     cursor: pointer;
 }
 
-#seta_perfil{
-    
+#seta_perfil {
+
 }
 
-#circulo_perfil{
+#circulo_perfil {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -108,7 +109,7 @@ header nav {
     display: flex;
 }
 
-#imagem_perfil{
+#imagem_perfil {
     width: 60px;
     height: 50px;
 }
@@ -116,22 +117,26 @@ header nav {
 /* Titulo */
 
 .title-bar {
-    width: 100%; 
+    width: 100%;
     background: #FAFAFA;
     min-height: 80px;
     display: flex;
+    justify-content: center; /* Centraliza o title-content dentro do title-bar */
     padding: 10px 0;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 50px;
 }
 
 .title-content {
-    padding-left: 20%;
+    /* REMOVA ou COMENTE a linha: padding-left: 20%; */
+    /* Use as mesmas regras de largura e centralização do container-questions */
+    width: 60%; 
+    padding-left: 0; /* Garante que não há padding extra */
 }
 
 .title-bar h1 {
     font-size: 36px;
-    font-weight: bold; 
+    font-weight: bold;
     margin: 0;
     padding: 0;
     color: #111827;
@@ -148,7 +153,8 @@ header nav {
 /* Questões */
 
 .container-questions {
-    width: 60%;
+    max-width: 1200px;
+    width: 60%; 
     margin: auto;
 }
 
@@ -159,11 +165,13 @@ header nav {
 .questions-multiple {
     display: flex;
     flex-direction: row;
-    gap: 38%;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .questions .questions-title {
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 15px;
     display: block;
     line-height: 30px;
@@ -181,13 +189,14 @@ header nav {
     margin: 25px 0;
 }
 
-/* Opções de resposta */
+/* Opções */
 
 .options {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 25px; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-top: 50px;
+    justify-content: space-between;
 }
 
 .options label {
@@ -201,6 +210,9 @@ header nav {
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
     font-weight: bold;
     color: #111827;
+    flex: 1 1 45%;
+    min-width: 150px;
+    text-align: center;
 }
 
 .options label:hover {
@@ -212,11 +224,11 @@ header nav {
 .options label.selected {
     background-color: #111827;
     color: #fff;
-    border-color: #111827; 
+    border-color: #111827;
 }
 
 .options label.selected:hover {
-    background-color: #111827; 
+    background-color: #111827;
     color: #fff;
     border-color: #111827;
 }
@@ -228,28 +240,30 @@ header nav {
     height: 0;
 }
 
-/* Botão finalizar */
+/* finalizar */
 
 .finish-button {
     background-color: #111827;
     color: #ffffff;
     border: none;
     border-radius: 5px;
-    
+
     padding: 10px 30px;
     font-size: 16px;
     font-weight: bold;
-    
+
     cursor: pointer;
     transition: background-color 0.2s, transform 0.1s, box-shadow 0.1s;
-    
+
     outline: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    display: block;
+    margin: 30px auto;
 }
 
 .finish-button:hover {
     background-color: #343a40;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
 }
 
 .finish-button:active {
