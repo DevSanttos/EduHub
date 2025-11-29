@@ -14,20 +14,16 @@ function selectOption(radio) {
     }
 }
 
-// --- LÓGICA DO QUIZ (JavaScript) ---
-
-// 1. Respostas Corretas e Info das Questões (Manter como estava)
 const RESPOSTAS_CORRETAS = {
-    'q1': '3-1-4-2-5', // Associações
-    'q2': 'a',         // Método Main
-    'q3': 'd',         // Operador de igualdade (==)
-    'q4': 'b',         // System.out.println()
-    'q5': 'a',         // Conceitos Java (V, V, V, F)
-    'q6': 'b',         // Tipo para texto (String)
+    'q1': '3-1-4-2-5', 
+    'q2': 'a',      
+    'q3': 'd',   
+    'q4': 'b',     
+    'q5': 'a',  
+    'q6': 'b',  
 };
 
 const QUESTOES_INFO = [
-    // ... (Mantenha as definições de QUESTOES_INFO aqui) ...
     {
         id: 'q1',
         titulo: 'Associe os números aos parênteses, marcando a opção onde aparece a sequência correta:',
@@ -90,8 +86,6 @@ const QUESTOES_INFO = [
     }
 ];
 
-
-// 2. Função principal de Finalização
 function finalizarTeste() {
     let acertos = 0;
     const totalQuestoes = Object.keys(RESPOSTAS_CORRETAS).length;
@@ -99,7 +93,6 @@ function finalizarTeste() {
     const reviewContainer = document.getElementById('question-review-container');
     reviewContainer.innerHTML = '';
 
-    // ... (Lógica de contagem de acertos e geração do resumo da questão - Manter como estava) ...
     QUESTOES_INFO.forEach(info => {
         const questaoId = info.id;
         const respostaCorreta = RESPOSTAS_CORRETAS[questaoId];
@@ -144,12 +137,10 @@ function finalizarTeste() {
     });
 
 
-    // 3. Atualiza o cabeçalho e pontuação (Manter como estava)
     const resultHeading = document.getElementById('result-heading');
     const resultSubtitle = document.getElementById('main-subtitle');
 
-    // Critério de aprovação: acertos >= 5
-    const APROVADO = acertos >= 5;
+    const APROVADO = acertos >= 3;
 
     const mensagem = APROVADO
         ? `Parabéns! Você acertou ${acertos} de ${totalQuestoes} questões e está apto a receber seu certificado de Desenvolvimento Full Stack!`
@@ -158,10 +149,8 @@ function finalizarTeste() {
     resultHeading.textContent = mensagem;
     resultSubtitle.textContent = "Confira as respostas abaixo:";
 
-
-    // 4. Geração do Botão Dinâmico (NOVO)
     const buttonContainerResultado = document.querySelector('#result-screen .button-container');
-    buttonContainerResultado.innerHTML = ''; // Limpa o container anterior
+    buttonContainerResultado.innerHTML = '';
 
     if (APROVADO) {
         buttonContainerResultado.innerHTML = `
@@ -170,21 +159,19 @@ function finalizarTeste() {
                 </a>
             `;
     } else {
-        // Cria o botão Refazer Teste
+
         buttonContainerResultado.innerHTML = `
                 <button class="finish-button" onclick="reiniciarTeste()">Refazer Teste</button>
             `;
     }
 
 
-    // 5. Exibe a tela de resultados e oculta a tela de quiz (Manter como estava)
     document.getElementById('quiz-screen').style.display = 'none';
     document.getElementById('result-screen').style.display = 'block';
 
     window.scrollTo(0, 0);
 }
 
-// 6. Função de Reiniciar Teste (Manter como estava)
 function reiniciarTeste() {
     window.location.reload();
 }
