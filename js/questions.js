@@ -15,12 +15,12 @@ function selectOption(radio) {
 }
 
 const RESPOSTAS_CORRETAS = {
-    'q1': '3-1-4-2-5', 
-    'q2': 'a',      
-    'q3': 'd',   
-    'q4': 'b',     
-    'q5': 'a',  
-    'q6': 'b',  
+    'q1': '3-1-4-2-5',
+    'q2': 'a',
+    'q3': 'd',
+    'q4': 'b',
+    'q5': 'a',
+    'q6': 'b',
 };
 
 const QUESTOES_INFO = [
@@ -114,28 +114,24 @@ function finalizarTeste() {
 
         let feedback = '';
         if (status === 'correta') {
-            feedback = `<button class="finish-button feedback-badge correta">Resposta correta!</button>`;
+            feedback = `<button class="finish-button feedback-question correta">Resposta correta!</button>`;
         } else {
-            feedback = `<button class="finish-button feedback-badge errada">Resposta incorreta!</button>`;
+            feedback = `<button class="finish-button feedback-question errada">Resposta incorreta!</button>`;
         }
 
-
         reviewElement.innerHTML = `
-                <div class="questions-title">${info.titulo}</div>
-                
-                ${feedback}
-
-                <p><strong>Sua Resposta:</strong> <span class="${status === 'correta' ? 'correct-answer-text' : 'user-answer-text'}">${textoOpcaoUsuario}</span></p>
-                
-                ${status === 'errada' ?
-                `<p><strong>Resposta Correta:</strong> <span class="correct-answer-text">${textoOpcaoCorreta}</span></p>`
+            <div class="questions-title">${info.titulo}</div>
+            
+            <p><strong>Sua Resposta:</strong> <span class="${status === 'correta' ? 'correct-question-text' : 'user-answer-text'}">${textoOpcaoUsuario}</span></p>
+            
+            ${status === 'errada' ?
+                `<p><strong>Resposta Correta:</strong> <span class="correct-question-text">${textoOpcaoCorreta}</span></p>`
                 : ''}
-                
-                <div class="divider"></div>
-            `;
+            
+            ${feedback} <div class="divider"></div>
+        `;
         reviewContainer.appendChild(reviewElement);
     });
-
 
     const resultHeading = document.getElementById('result-heading');
     const resultSubtitle = document.getElementById('main-subtitle');
@@ -154,15 +150,15 @@ function finalizarTeste() {
 
     if (APROVADO) {
         buttonContainerResultado.innerHTML = `
-                <a href="certificados.html" target="_blank">
-                    <button class="finish-button certificato-btn">Obter Certificado</button>
-                </a>
-            `;
+            <a href="certificados.html" target="_blank">
+                <button class="finish-button certificato-btn">Obter Certificado</button>
+            </a>
+        `;
     } else {
 
         buttonContainerResultado.innerHTML = `
-                <button class="finish-button" onclick="reiniciarTeste()">Refazer Teste</button>
-            `;
+            <button class="finish-button" onclick="reiniciarTeste()">Refazer Teste</button>
+        `;
     }
 
 

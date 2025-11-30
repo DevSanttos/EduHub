@@ -34,14 +34,14 @@
     <div class="title-bar">
         <div class="title-content">
             <h1>Teste prático de Desenvolvimento Full Stack</h1>
-            <p class="subtitle" id="main-subtitle">Questões de múltipla escolha para fixar o que você aprendeu no curso.
+            <p class="subtitle" id="id-subtitle">Questões de múltipla escolha para fixar o que você aprendeu no curso.
             </p>
         </div>
     </div>
 
     <div id="quiz-screen">
         <div class="container-questions">
-            <div class="questions" data-question-id="q1">
+            <div class="questions" question-id="q1">
                 <p class="questions-title">Associe os números aos parênteses, marcando a opção onde aparece a sequência
                     correta:</p>
 
@@ -76,7 +76,7 @@
 
             <div class="divider"></div>
 
-            <div class="questions" data-question-id="q2">
+            <div class="questions" question-id="q2">
                 <p class="questions-title"> Qual destas é a assinatura correta do método principal em Java?</p>
                 <p>
                     a) public static void main(String args[])<br>
@@ -86,8 +86,8 @@
                 </p>
 
                 <div class="options">
-                    <label><input type="radio" name="q2" value="a" onclick="selectOption(this)"> a</label> <label><input
-                            type="radio" name="q2" value="b" onclick="selectOption(this)"> b</label>
+                    <label><input type="radio" name="q2" value="a" onclick="selectOption(this)"> a</label>
+                    <label><input type="radio" name="q2" value="b" onclick="selectOption(this)"> b</label>
                     <label><input type="radio" name="q2" value="c" onclick="selectOption(this)"> c</label>
                     <label><input type="radio" name="q2" value="d" onclick="selectOption(this)"> d</label>
                 </div>
@@ -95,7 +95,7 @@
 
             <div class="divider"></div>
 
-            <div class="questions" data-question-id="q3">
+            <div class="questions" question-id="q3">
                 <p class="questions-title">Qual operador é usado para comparar igualdade entre dois valores?</p>
                 <p>
                     a) =<br>
@@ -114,7 +114,7 @@
 
             <div class="divider"></div>
 
-            <div class="questions" data-question-id="q4">
+            <div class="questions" question-id="q4">
                 <p class="questions-title">O que o comando System.out.println() faz?</p>
                 <p>
                     a) Lê dados do teclado<br>
@@ -125,15 +125,15 @@
 
                 <div class="options">
                     <label><input type="radio" name="q4" value="a" onclick="selectOption(this)"> a</label>
-                    <label><input type="radio" name="q4" value="b" onclick="selectOption(this)"> b</label> <label><input
-                            type="radio" name="q4" value="c" onclick="selectOption(this)"> c</label>
+                    <label><input type="radio" name="q4" value="b" onclick="selectOption(this)"> b</label>
+                    <label><input type="radio" name="q4" value="c" onclick="selectOption(this)"> c</label>
                     <label><input type="radio" name="q4" value="d" onclick="selectOption(this)"> d</label>
                 </div>
             </div>
 
             <div class="divider"></div>
 
-            <div class="questions" data-question-id="q5">
+            <div class="questions" question-id="q5">
                 <p class="questions-title">Sobre conceitos básicos da linguagem Java, analise as afirmações abaixo e
                     marque V para verdadeiro e F para falso, depois assinale a alternativa que apresenta a sequência
                     correta:
@@ -155,8 +155,8 @@
                 </div>
 
                 <div class="options">
-                    <label><input type="radio" name="q5" value="a" onclick="selectOption(this)"> a</label> <label><input
-                            type="radio" name="q5" value="b" onclick="selectOption(this)"> b</label>
+                    <label><input type="radio" name="q5" value="a" onclick="selectOption(this)"> a</label>
+                    <label><input type="radio" name="q5" value="b" onclick="selectOption(this)"> b</label>
                     <label><input type="radio" name="q5" value="c" onclick="selectOption(this)"> c</label>
                     <label><input type="radio" name="q5" value="d" onclick="selectOption(this)"> d</label>
                 </div>
@@ -164,7 +164,7 @@
 
             <div class="divider"></div>
 
-            <div class="questions" data-question-id="q6">
+            <div class="questions" question-id="q6">
                 <p class="questions-title">Qual tipo de dado é usado para armazenar texto em Java?</p>
                 <p>
                     a) text <br>
@@ -175,8 +175,8 @@
 
                 <div class="options">
                     <label><input type="radio" name="q6" value="a" onclick="selectOption(this)"> a</label>
-                    <label><input type="radio" name="q6" value="b" onclick="selectOption(this)"> b</label> <label><input
-                            type="radio" name="q6" value="c" onclick="selectOption(this)"> c</label>
+                    <label><input type="radio" name="q6" value="b" onclick="selectOption(this)"> b</label>
+                    <label><input type="radio" name="q6" value="c" onclick="selectOption(this)"> c</label>
                     <label><input type="radio" name="q6" value="d" onclick="selectOption(this)"> d</label>
                 </div>
             </div>
@@ -190,7 +190,7 @@
     <div id="result-screen" style="display: none;">
         <div class="container-questions">
 
-            <h2 id="result-heading"></h2>
+            <h2 id="result-title"></h2>
             <p class="subtitle" id="result-subtitle"></p>
 
             <div id="question-review-container">
