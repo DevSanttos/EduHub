@@ -12,14 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (botaoLogin) {
         botaoLogin.addEventListener('click', function(event) {
-
             event.preventDefault(); 
-
             header.classList.add('modo-logado');
-
             localStorage.setItem('usuario_logado', 'true');
-            
-            console.log('Usuário logou e estado salvo.');
         });
     }
 
@@ -46,17 +41,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (btnLogout) {
         btnLogout.addEventListener('click', function(event) {
-
+            
             event.preventDefault();
 
-            if(menuDropdown) funcPerfil.classList.remove('ativo');
+            if(menuDropdown){
+                funcPerfil.classList.remove('ativo');
+            } 
+
             header.classList.remove('modo-logado');
-
             localStorage.removeItem('usuario_logado');
-
-            console.log("Memória limpa. Redirecionando...");
-
             window.location.href = "principal.html"; 
+
         });
     }
 
