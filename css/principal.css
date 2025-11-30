@@ -13,6 +13,8 @@ body {
 
 header {
     background-color: #111827;
+    position: relative;
+    z-index: 1000;
 }
 
 header nav {
@@ -46,6 +48,14 @@ header nav {
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+header.modo-logado #func_perfil{
+    display: flex;
+}
+
+header.modo-logado #login_cadastro_btn{
+    display: none;
 }
 
 #login_cadastro_btn button {
@@ -222,10 +232,10 @@ section.certificados {
 
 /*Estilização dos modais de overlay*/
 .modal_overlay {
-    
-    display: none; 
-    
+    display: flex; 
     position: fixed; 
+    opacity: 0;
+    visibility: hidden;
     top: 0;
     left: 0;
     width: 100%;
@@ -233,15 +243,16 @@ section.certificados {
     z-index: 1000; 
     justify-content: center;
     align-items: center;
-
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease-in-out;
 }
 
 
 .modal_overlay.mostrar {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
 }
 
 .modal_header{
@@ -272,6 +283,14 @@ section.certificados {
     position: relative; 
     animation: surgimento 0.3s ease-out;
     height: 547px;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal_overlay.mostrar .modal_content {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .close_btn {
@@ -497,17 +516,79 @@ section.certificados {
 /* Estilização da div que cuida da foto de perfil com a setinha */
 
 #func_perfil{
-    display: flex;
+    position: relative;
+    display: none;
     gap: 25px;
     align-items: center;
     justify-items: center;
     color: white;
     font-size: 1.5em;
-    cursor: pointer;
+}
+
+#func_perfil.ativo .menu_dropdown{
+    display: block;
+    animation: menuFade 0.2s ease-out;
+}
+
+.menu_dropdown{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.menu_dropdown.ativo{
+    display: block;
+    animation: menuFade 0.2s ease-out;
+}
+
+.menu_dropdown ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu_dropdown li a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.menu_dropdown li a:hover {
+    background-color: #f1f1f1;
+}
+
+@keyframes menuFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 #seta_perfil{
-    
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 8px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transform-origin: center;
+    box-sizing: border-box;
+}
+
+#func_perfil.ativo #seta_perfil{
+    background-color: white;
+    color: #111827;
+    transform: rotate(180deg);
 }
 
 #circulo_perfil{
@@ -518,7 +599,7 @@ section.certificados {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    
 }
 
 #imagem_perfil {
