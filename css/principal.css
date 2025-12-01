@@ -164,7 +164,7 @@ section.certificados {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 0px 240px;
+    margin: 0px 10%;
     border-color: #11182721;
     border-style: solid;
     border-top: 0cap;
@@ -183,8 +183,8 @@ section.certificados {
 }
 
 .card_certificado {
-    width: 1035px;
-    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
     border-radius: 15px;
     background-color: white;
     display: flex;
@@ -226,6 +226,7 @@ section.certificados {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 80%;
 }
 
 /*---------------------------------- Fim certificados ----------------------------------*/
