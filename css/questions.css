@@ -95,7 +95,6 @@ header.modo-logado #login_cadastro_btn {
     transition: 0.3s;
 }
 
-main {}
 
 #func_perfil {
     position: relative;
@@ -434,8 +433,6 @@ footer {
 #links_rodape a:hover {
     text-decoration: underline;
 }
-
-#info_rodape {}
 
 #info_rodape p {
 
