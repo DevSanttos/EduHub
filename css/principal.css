@@ -531,7 +531,7 @@ section.certificados {
     display: none;
     position: absolute;
     top: 60px;
-    right: 0;
+    right: -50px;
     
     background-color: white;
     width: 300px;
@@ -602,6 +602,16 @@ section.certificados {
 #func_perfil.ativo .menu_dropdown {
     display: flex; 
     animation: menuFade 0.2s ease-out;
+}
+
+#prof_menu{
+    color: #111827;
+    display: flex;
+    margin: 10px;
+}
+
+#info_usuario{
+    margin: 5%;
 }
 
 @keyframes menuFade {
