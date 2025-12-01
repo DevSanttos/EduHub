@@ -517,6 +517,7 @@ section.certificados {
 /* Estilização da div que cuida da foto de perfil com a setinha */
 
 #func_perfil{
+    margin-right: 3%;
     position: relative;
     display: none;
     gap: 25px;
@@ -526,45 +527,81 @@ section.certificados {
     font-size: 1.5em;
 }
 
-#func_perfil.ativo .menu_dropdown{
-    display: block;
-    animation: menuFade 0.2s ease-out;
-}
-
-.menu_dropdown{
+.menu_dropdown {
     display: none;
     position: absolute;
     top: 60px;
     right: 0;
+    
     background-color: white;
-    width: 200px;
-    border-radius: 8px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    z-index: 100;
     overflow: hidden;
+    padding: 8px; 
+
+    flex-direction: column; 
 }
 
-.menu_dropdown.ativo{
+.menu_dropdown.ativo {
     display: block;
     animation: menuFade 0.2s ease-out;
 }
 
-.menu_dropdown ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
-.menu_dropdown li a {
-    display: block;
-    padding: 12px 16px;
+.menu_item {
+    display: flex; 
+    align-items: center; 
+    gap: 12px;         
+    
     text-decoration: none;
-    color: #333;
-    font-size: 16px;
+    color: #111827;
+    padding: 12px;
+    border-radius: 8px; 
     transition: background 0.2s;
 }
 
-.menu_dropdown li a:hover {
-    background-color: #f1f1f1;
+.menu_item:hover {
+    background-color: #f3f4f6;
+}
+
+.icone {
+    font-size: 1.2em;
+    width: 40px;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column; 
+}
+
+.titulo {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.subtitulo {
+    font-size: 12px;
+    color: #8b8e92;
+}
+
+.menu_divider {
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 8px 0; 
+}
+
+
+.item_sair:hover {
+    background-color: #fee2e2; 
+    color: #ef4444;            
+}
+
+#func_perfil.ativo .menu_dropdown {
+    display: flex; 
+    animation: menuFade 0.2s ease-out;
 }
 
 @keyframes menuFade {
