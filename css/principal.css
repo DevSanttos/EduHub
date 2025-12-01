@@ -250,7 +250,6 @@ section.certificados {
     transition: all 0.3s ease-in-out;
 }
 
-
 .modal_overlay.mostrar {
     opacity: 1;
     visibility: visible;
@@ -272,7 +271,6 @@ section.certificados {
     color: white;
     font-size: 40px;
 }
-
 
 .modal_content {
     background-color: white;
@@ -358,7 +356,6 @@ section.certificados {
     place-content: center;
     transition: all 0.2s ease-in-out;
 }
-
 
 #selecao_idioma input[type="radio"]::before {
     content: "";
@@ -607,11 +604,37 @@ section.certificados {
 #prof_menu{
     color: #111827;
     display: flex;
-    margin: 10px;
+    margin: 5px 10px 5px;
+}
+
+#prof_button{
+    font-size: 12px;
+    width: 100px;
+    border: 2px;
+    height: 35px;
+    margin-left: 18%;
+    font-weight: 800;
+    background-color: #111827;
+    color: #d1d5db;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#prof_button:hover{
+    background-color: #374151;
 }
 
 #info_usuario{
-    margin: 5%;
+    margin-left: 5%;
+}
+
+#nome_usuario{
+    font-size: 16px;
+}
+
+#nome_usuario_id{
+    font-size: 15px;
+    color: #11182780;
 }
 
 @keyframes menuFade {
