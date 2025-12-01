@@ -12,9 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (botaoLogin) {
         botaoLogin.addEventListener('click', function(event) {
-            event.preventDefault(); 
-            header.classList.add('modo-logado');
-            localStorage.setItem('usuario_logado', 'true');
+            window.open('tela_login.html', '_self');
         });
     }
 
@@ -51,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('modo-logado');
             localStorage.removeItem('usuario_logado');
             window.location.href = "principal.html"; 
-
         });
     }
 
@@ -82,3 +79,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
+// ajeitar
+function realizarLogin(target = 'principal.html') {
+    const header = document.querySelector('header');
+    alert("Login realizado com sucesso!");
+    header.classList.add('modo-logado');
+    localStorage.setItem('usuario_logado', 'true');
+    window.open(target, '_self');
+}
+
+function retornaPagPrincipal(target = 'principal.html') {
+    window.open(target, '_self');
+}

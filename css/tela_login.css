@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111827;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #111827;
+}
+
+#box-login {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+#header_login {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #111827 ;
+}
+
+#x_sair {
+    display: flex;
+    background-color: #e2e0e0;
+    border-radius: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #111827;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#x_sair svg:hover {
+    fill: #ff0000;
+    transition: fill 0.1s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #111827 ;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #111827 ;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #374151 ;
+}
