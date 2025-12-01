@@ -10,6 +10,8 @@ body {
 
 header {
     background-color: #111827;
+    position: relative;
+    z-index: 1000;
 }
 
 header nav {
@@ -43,6 +45,14 @@ header nav {
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+header.modo-logado #func_perfil {
+    display: flex;
+}
+
+header.modo-logado #login_cadastro_btn {
+    display: none;
 }
 
 #login_cadastro_btn button {
@@ -82,34 +92,107 @@ header nav {
     background-color: transparent;
     color: #ffffff;
     border: solid;
+    transition: 0.3s;
 }
 
+
 #func_perfil {
-    display: flex;
+    position: relative;
+    display: none;
     gap: 25px;
     align-items: center;
     justify-items: center;
     color: white;
     font-size: 1.5em;
-    cursor: pointer;
 }
 
-#seta_perfil {}
+#func_perfil.ativo .menu_dropdown {
+    display: block;
+    animation: menuFade 0.2s ease-out;
+}
+
+.menu_dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.menu_dropdown.ativo {
+    display: block;
+    animation: menuFade 0.2s ease-out;
+}
+
+.menu_dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu_dropdown li a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.menu_dropdown li a:hover {
+    background-color: #f1f1f1;
+}
+
+@keyframes menuFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#seta_perfil {
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 8px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transform-origin: center;
+    box-sizing: border-box;
+}
+
+#func_perfil.ativo #seta_perfil {
+    background-color: white;
+    color: #111827;
+    transform: rotate(180deg);
+}
 
 #circulo_perfil {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
-    align-items: center;
-    justify-items: center;
-    cursor: pointer;
     display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #imagem_perfil {
-    width: 60px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -252,7 +335,7 @@ header nav {
     border: none;
     border-radius: 5px;
 
-    padding: 20px 50px;
+    padding: 10px 50px;
     margin-top: 30px;
     margin-bottom: 100px;
     font-size: 16px;
@@ -292,11 +375,11 @@ header nav {
     font-size: 16px;
     font-weight: bold;
     color: #ffffff;
-    cursor: default; 
+    cursor: default;
     width: 100%;
     text-align: center;
     padding: 15px 0;
-    margin: 15px 0; 
+    margin: 15px 0;
 }
 
 .feedback-question.correta {
@@ -350,8 +433,6 @@ footer {
 #links_rodape a:hover {
     text-decoration: underline;
 }
-
-#info_rodape {}
 
 #info_rodape p {
 
