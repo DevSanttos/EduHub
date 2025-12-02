@@ -28,11 +28,10 @@ ESTILIZAÇÃO DO CABEÇALHO
 */
 
 header {
-    background-color: #111827;    
-    position: relative;        /* permite z-index */
-    z-index: 9999;             /* muito alto para garantir prioridade */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-
+    background-color: #111827;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.281);
+    z-index: 1000;
 }
 
 header nav {
@@ -66,6 +65,14 @@ header nav {
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+header.modo-logado #func_perfil{
+    display: flex;
+}
+
+header.modo-logado #login_cadastro_btn{
+    display: none;
 }
 
 #login_cadastro_btn button {
@@ -105,6 +112,7 @@ header nav {
     background-color: transparent;
     color: #ffffff;
     border: solid;
+    transition: 0.3s;
 }
 
 /*
@@ -182,7 +190,7 @@ main section:last-of-type div {
 .btn_anterior {
     padding: 50px;
     background-color: var(--cor6);
-    color: var(--cor1);
+    color: var(--cor2);
     font-weight: 700;
 }
 
@@ -194,7 +202,7 @@ main section:last-of-type div {
 
 .btn_proxima {
     background-color: var(--cor6);
-    color: var(--cor1);
+    color: var(--cor2);
     font-weight: 700;
 }
 
@@ -301,4 +309,171 @@ footer {
 
 #info_rodape p {
     color: #ffffff;
+}
+
+/*ESTILIZAÇÃO DO PERFIL*/
+#func_perfil{
+    margin-right: 3%;
+    position: relative;
+    display: none;
+    gap: 25px;
+    align-items: center;
+    justify-items: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+.menu_dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: -50px;
+    
+    background-color: white;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    z-index: 100;
+    overflow: hidden;
+    padding: 8px; 
+
+    flex-direction: column; 
+}
+
+.menu_dropdown.ativo {
+    display: block;
+    animation: menuFade 0.2s ease-out;
+}
+
+
+.menu_item {
+    display: flex; 
+    align-items: center; 
+    gap: 12px;         
+    
+    text-decoration: none;
+    color: #111827;
+    padding: 12px;
+    border-radius: 8px; 
+    transition: background 0.2s;
+}
+
+.menu_item:hover {
+    background-color: #f3f4f6;
+}
+
+.icone {
+    font-size: 1.2em;
+    width: 40px;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column; 
+}
+
+.titulo {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.subtitulo {
+    font-size: 12px;
+    color: #8b8e92;
+}
+
+.menu_divider {
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 8px 0; 
+}
+
+
+.item_sair:hover {
+    background-color: #fee2e2; 
+    color: #ef4444;            
+}
+
+#func_perfil.ativo .menu_dropdown {
+    display: flex; 
+    animation: menuFade 0.2s ease-out;
+}
+
+#prof_menu{
+    color: #111827;
+    display: flex;
+    margin: 5px 10px 5px;
+}
+
+#prof_button{
+    font-size: 12px;
+    width: 100px;
+    border: 2px;
+    height: 35px;
+    margin-left: 18%;
+    font-weight: 800;
+    background-color: #111827;
+    color: #d1d5db;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#prof_button:hover{
+    background-color: #374151;
+}
+
+#info_usuario{
+    margin-left: 5%;
+}
+
+#nome_usuario{
+    font-size: 16px;
+}
+
+#nome_usuario_id{
+    font-size: 15px;
+    color: #11182780;
+}
+
+@keyframes menuFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#seta_perfil{
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 8px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transform-origin: center;
+    box-sizing: border-box;
+}
+
+#func_perfil.ativo #seta_perfil{
+    background-color: white;
+    color: #111827;
+    transform: rotate(180deg);
+}
+
+#circulo_perfil{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#imagem_perfil {
+    width: 100%;       
+    height: 100%;      
+    object-fit: cover; 
 }

@@ -168,7 +168,7 @@ section.certificados {
     border-color: #11182721;
     border-style: solid;
     border-top: 0cap;
-    
+    min-width: 960px;
 }
 
 #titulo_certificados {
@@ -226,6 +226,7 @@ section.certificados {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    min-width: 850px;
     width: 80%;
 }
 
@@ -677,6 +678,7 @@ section.certificados {
     width: 100%;       
     height: 100%;      
     object-fit: cover; 
+    transform: scale(1.5);
 }
 
 /*--------------- Fim da estilização da div que cuida da foto de perfil com a setinha  ---------------*/
