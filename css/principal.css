@@ -678,6 +678,7 @@ section.certificados {
     width: 100%;       
     height: 100%;      
     object-fit: cover; 
+    transform: scale(1.5);
 }
 
 /*--------------- Fim da estilização da div que cuida da foto de perfil com a setinha  ---------------*/
