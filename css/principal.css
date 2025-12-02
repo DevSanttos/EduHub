@@ -711,6 +711,10 @@ section.certificados {
     padding: 30px 0px
 }
 
+#card_tela_video{
+    text-decoration: none;
+}
+
 .card_curso {
     display: flex;
     flex-direction: column;
