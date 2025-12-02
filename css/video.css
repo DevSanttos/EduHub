@@ -477,3 +477,12 @@ footer {
     height: 100%;      
     object-fit: cover; 
 }
+
+.questions_redirect {
+    background-color:#BCBCBC;
+}
+
+.questions_redirect a{
+    text-decoration: none;
+    color: #061F55;
+}
